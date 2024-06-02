@@ -11,15 +11,15 @@ let isAutoPlaying = false;
 let intervalId ; 
 
 document.querySelector('.js-rock-btn').addEventListener('click', ()=>{
-  playGame('Rock');
+  playGame('rock');
 });   
 
 document.querySelector('.js-paper-btn').addEventListener('click', ()=>{
-  playGame('Paper');
+  playGame('paper');
 });
 
 document.querySelector('.js-scissor-btn').addEventListener('click', ()=>{
-  playGame('Scissor');
+  playGame('scissor');
 });
 
 document.querySelector('.js-reset-btn').addEventListener('click', () =>{
@@ -35,13 +35,13 @@ document.querySelector('.js-autoplay-btn').addEventListener('click', () => {
 
 document.body.addEventListener('keydown', (event)=>{
   if(event.key === 'r' || event.key === 'R'){
-    playGame('Rock');
+    playGame('rock');
 
   }else if(event.key === 'p' || event.key === 'P'){
-    playGame('Paper');
+    playGame('paper');
 
   }else if(event.key === 's' || event.key === 'S'){
-    playGame('Scissor');
+    playGame('scissor');
 
   } else if(event.key === 'a' || event.key === 'A'){
     autoPlay();
@@ -103,28 +103,28 @@ function playGame(playerMove){
   const computerMove =  pickComputerMove()
   let result = '';
 
-  if(playerMove === 'Scissor'){
-    if(computerMove === 'Rock'){
+  if(playerMove === 'scissor'){
+    if(computerMove === 'rock'){
     result = 'You Lose.' ;
-    } else if(computerMove === 'Paper'){
+    } else if(computerMove === 'paper'){
       result = 'You Win.';
     } else {
       result= 'Tie.';
     }
 
-  } else if(playerMove === 'Paper'){
-    if(computerMove === 'Rock'){
+  } else if(playerMove === 'paper'){
+    if(computerMove === 'rock'){
     result = 'You Win.' ;
-    } else if(computerMove === 'Paper'){
+    } else if(computerMove === 'paper'){
       result = 'Tie.';
     } else {
       result= 'You Lose.';
     }
     
-  } else if(playerMove === 'Rock'){
-    if(computerMove === 'Rock'){
+  } else if(playerMove === 'rock'){
+    if(computerMove === 'rock'){
     result = 'Tie.' ;
-    } else if(computerMove === 'Paper'){
+    } else if(computerMove === 'paper'){
       result = 'You Lose.';
     } else {
       result= 'You Win.';
