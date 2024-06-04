@@ -1,12 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   background-color: rgb(25, 25, 25);
   color: white;
   font-family: Arial;
 }
 
+.container{
+  width: 400px;
+  margin: 100px auto 0;
+  padding: 20px ;
+  display: flex;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
 .title{
   font-size: 30px;
   font-weight: bold;
+  margin-bottom:15px ;
 }
 
 .move-icons{
@@ -27,13 +44,17 @@ body{
 .result{
   font-size: 25px;
   font-weight: bold;
-  margin-top: 50px;
+  margin: 20px 0;
 
 }
 
 .score{
-  margin-top: 60px;
+  margin-top: 30px;
 
+}
+
+.moves-sign{
+  margin-bottom: 20px;
 }
 
 .resetBtn, .auto-play-btn{
@@ -44,8 +65,15 @@ body{
   padding: 10px 20px;
   border-radius: 2px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-right: 10px;
+}
+
+.reset-confirm-btn-all{
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+
 }
 
 .reset-confirm-btn{
@@ -60,4 +88,19 @@ body{
   margin-top: 20px;
   font-size: 15px;
   
+}
+
+@media screen and (max-width: 480px) {
+  .container{
+    width: 380px;
+  }
+
+  .move-btn{
+    width: 80px;
+    height: 80px;
+  }
+
+  .move-icons{
+    height: 35px;
+  }
 }
