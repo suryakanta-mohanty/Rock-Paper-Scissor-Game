@@ -56,13 +56,15 @@ document.body.addEventListener('keydown', (event)=>{
 function showResetConfirmation(){
   document.querySelector('.js-reset-confirmation').innerHTML = `
     Are you sure you want to reset the score?
-    <button class="js-reset-confirm-yes reset-confirm-btn">
-      Yes
-    </button>
+    <div class="reset-confirm-btn-all">
+      <button class="js-reset-confirm-yes reset-confirm-btn">
+        Yes
+      </button>
 
-    <button class="js-reset-confirm-no reset-confirm-btn">
-      No
-    </button>
+      <button class="js-reset-confirm-no reset-confirm-btn">
+        No
+      </button>
+    </div>
   `;
 
   // Attach event listeners after the buttons are created
