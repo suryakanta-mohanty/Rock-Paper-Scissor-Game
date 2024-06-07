@@ -50,7 +50,24 @@ body{
 
 .score{
   margin-top: 30px;
+  user-select: none;
+  /* background-color: #F1F1F1; */
+  color: white;
+  border: 1.5px solid #F1F1F1 ;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  width: 325px;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
 
+.wins-score{
+  color: #65B741;
+}
+
+.tie-score{
+  color: #FA7070;
 }
 
 .moves-sign{
@@ -108,6 +125,10 @@ body{
   .move-icons{
     height: 40px;
   }
+  
+  .score{
+    width: 325px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -127,5 +148,9 @@ body{
 
   .move-icons{
     height: 40px;
+  }
+
+  .score{
+    width: 295px;
   }
 }
